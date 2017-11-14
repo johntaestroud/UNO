@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UNO
 {
-   public enum Color
+   public enum CardColor
     {
         Red,
         Blue,
@@ -15,7 +15,7 @@ namespace UNO
         Wild
     }
 
-    public enum Value
+    public enum CardValue
     {
         Zero,
         One,
