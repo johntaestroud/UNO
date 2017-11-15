@@ -43,10 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="CardDeck.cs" />
-    <Compile Include="GameManager.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="GameObjects\Card.cs" />
+    <Compile Include="GameObjects\CardDeck.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="GameObjects\GameManager.cs" />
+    <Compile Include="GameObjects\Player.cs" />
+    <Compile Include="GameObjects\PlayerTurn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
