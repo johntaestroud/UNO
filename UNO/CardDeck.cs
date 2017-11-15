@@ -104,8 +104,28 @@ namespace UNO
 
             }
         }
-        //public void Shuffle() { }
-        //public List<Card> Draw(int count) { }
+        //implementing shuffle method
+        public void Shuffle()
+        {
+            Random rand = new Random();
+            List<Card> cards = Cards;
+
+            for (int n = cards.Count - 1; n > 0; --n)
+            {
+                int j = rand.Next(n + 1);
+                Card temp = cards[n];
+                cards[n] = cards[j];
+                cards[j] = temp;
+            }
+        }
+        public List<Card> Draw(int count)
+        {
+            var drawnCards = Cards.Take(count).ToList();
+
+            Cards.RemoveAll(x => drawnCards.Contains(x));
+
+            return drawnCards;
+        }
 
     }
 }
