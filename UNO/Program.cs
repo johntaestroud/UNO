@@ -29,7 +29,9 @@ namespace UNO
         Nine,
         DrawTwo,
         DrawFour,
-        Wild
+        Wild,
+        Skip,
+        Reverse
     }
 
   
