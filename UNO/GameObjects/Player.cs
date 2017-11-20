@@ -142,7 +142,7 @@ namespace UNO.GameObjects
             turn.Result = TurnResult.PlayedCard;
             var matching = Hand.Where(x => x.Color == color || x.Color == CardColor.Wild).ToList();
 
-            //We cannot play wild draw four unless there are no other matches.
+            //We cannot play the wild draw four card unless there are no other matches.
             if (matching.All(x => x.Value == CardValue.DrawFour))
             {
                 turn.Card = matching.First();
@@ -153,7 +153,7 @@ namespace UNO.GameObjects
                 return turn;
             }
 
-            //Otherwise, we play the card that would cause the most damage to the next player.
+           
             if (matching.Any(x => x.Value == CardValue.DrawTwo))
             {
                 turn.Card = matching.First(x => x.Value == CardValue.DrawTwo);
@@ -204,7 +204,7 @@ namespace UNO.GameObjects
                 return turn;
             }
 
-            //shouldn't happen
+            
             turn.Result = TurnResult.ForceDrawNoMatch;
             return turn;
         }
@@ -226,7 +226,7 @@ namespace UNO.GameObjects
                 return turn;
             }
 
-            //Otherwise, we play the card that would cause a problem to the next player
+           
             if (matching.Any(x => x.Value == CardValue.DrawTwo))
             {
                 turn.Card = matching.First(x => x.Value == CardValue.DrawTwo);
@@ -272,7 +272,7 @@ namespace UNO.GameObjects
 
                     return turn;
                 }
-                else //Match depending on value
+                else //Matches depend on the value of the card
                 {
                     turn.Card = matchOnValue.First();
                     turn.DeclaredColor = turn.Card.Color;
@@ -299,7 +299,7 @@ namespace UNO.GameObjects
                 return turn;
             }
 
-            //wild cards are last.  If a wild becomes our last card, we win on the next turn!
+            //If a wild becomes our last card, player wins
             if (matching.Any(x => x.Value == CardValue.Wild))
             {
                 turn.Card = matching.First(x => x.Value == CardValue.Wild);
