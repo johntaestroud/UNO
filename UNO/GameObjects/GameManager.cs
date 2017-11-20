@@ -118,7 +118,7 @@ namespace UNO.GameObjects
                     }
                 }
             }
-
+            
             var winningPlayer = Players.Where(x => !x.Hand.Any()).First();
             Console.WriteLine("Player " + winningPlayer.Position.ToString() + " wins!!");
 
