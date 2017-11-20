@@ -8,7 +8,6 @@ namespace UNO.GameObjects
 {
     public class CardDeck
     {
-
         public List<Card> Cards { get; set; }
 
         public CardDeck()
