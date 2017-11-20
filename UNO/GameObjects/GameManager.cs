@@ -56,7 +56,7 @@ namespace UNO.GameObjects
             int i = 0;
             bool isAscending = true;
 
-            //First, let's show what each player starts with
+            //displaying player's beginner cards
             foreach (var player in Players)
             {
                 player.ShowHand();
@@ -83,7 +83,7 @@ namespace UNO.GameObjects
                     DrawPile.Cards = DiscardPile.Skip(1).ToList();
                     DrawPile.Shuffle();
 
-                    //Reset the discard pile to only have the current card.
+                    //Reset the discard pile
                     DiscardPile = new List<Card>();
                     DiscardPile.Add(currentCard);
 
@@ -104,7 +104,7 @@ namespace UNO.GameObjects
                 if (isAscending)
                 {
                     i++;
-                    if (i >= Players.Count) //Reset player counter
+                    if (i >= Players.Count) 
                     {
                         i = 0;
                     }
