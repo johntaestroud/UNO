@@ -15,7 +15,6 @@ namespace UNO.GameObjects
         {
             Cards = new List<Card>();
 
-            //For each individual color that has been defined
             foreach (CardColor color in Enum.GetValues(typeof(CardColor)))
             {
                 if (color != CardColor.Wild)
