@@ -339,6 +339,7 @@ namespace UNO.GameObjects
                 Console.Write(Enum.GetName(typeof(CardColor), card.Color) + " " + Enum.GetName(typeof(CardValue), card.Value) + "  ");
             }
             Console.WriteLine("");
+     
         }
     }
 }
